@@ -27,6 +27,6 @@ def get_dataset(dataset, use_cuda, batch_size):
     return train_iter, test_iter, TEXT, LABEL
 
 if __name__ == "__main__":
-    train_iter, _, _, LABEL = get_dataset('SST-5', True)
+    train_iter, _, _, LABEL = get_dataset('SST-5', True, 32)
     for label in LABEL.vocab.itos:
         print(label)
